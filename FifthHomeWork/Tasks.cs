@@ -143,6 +143,8 @@ namespace FifthHomeWork
 
             int tmp = 0;
 
+            string elements = "";
+
             string message = "";
 
             for (i = 0; i < line; i++)
@@ -156,12 +158,13 @@ namespace FifthHomeWork
                             ((i == line - 1) || (array[i, j] > array[i + 1, j]))
                         )
                     {
+                        elements += $" {array[i,j]} [{i},{j}] ;";
                         tmp++;
                     }
                 }
             }
 
-            message = $" Количество элементов массива, которые больше всех своих соседей одновременно равно {tmp}";
+            message = $" Количество элементов массива, которые больше всех своих соседей одновременно равно {tmp}:{elements}";
 
             return message;
         }
